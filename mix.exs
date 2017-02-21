@@ -2,13 +2,27 @@ defmodule UeberauthGoodreads.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :ueberauth_goodreads,
-     version: "0.1.0",
-     name: "Ueberauth Goodreads Strategy",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :ueberauth_goodreads,
+      version: "0.1.0",
+      name: "Ueberauth Goodreads Strategy",
+      description: "An Uberauth strategy for Goodreads authentication.",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      package: package()
+      deps: deps()
+   ]
+  end
+
+  defp package do
+    [files: ["lib", "mix.exs", "README.md", "LICENSE"],
+     maintainers: ["Tyler Clemens"],
+     licenses: ["MIT"],
+     links: %{
+      "GitHub": "https://github.com/tielur/ueberauth_goodreads",
+      "Docs": "http://hexdocs.pm/ueberauth_goodreads/readme.html"
+      }]
   end
 
   # Configuration for the OTP application
