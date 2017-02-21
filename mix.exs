@@ -19,10 +19,7 @@ defmodule UeberauthGoodreads.Mixfile do
     [files: ["lib", "mix.exs", "README.md", "LICENSE"],
      maintainers: ["Tyler Clemens"],
      licenses: ["MIT"],
-     links: %{
-      "GitHub": "https://github.com/tielur/ueberauth_goodreads",
-      "Docs": "http://hexdocs.pm/ueberauth_goodreads/readme.html"
-      }]
+     links: %{"GitHub": "https://github.com/tielur/ueberauth_goodreads"}]
   end
 
   # Configuration for the OTP application
