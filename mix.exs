@@ -10,7 +10,7 @@ defmodule UeberauthGoodreads.Mixfile do
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      package: package()
+      package: package(),
       deps: deps()
    ]
   end
@@ -45,11 +45,12 @@ defmodule UeberauthGoodreads.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.11"},
-      {:oauth, github: "tim/erlang-oauth"},
+      {:oauth, github: "tim/erlang-oauth", only: [:dev, :test]},
       {:poison, "~> 1.3 or ~> 2.0"},
       {:ueberauth, "~> 0.3"},
       {:sweet_xml, "~> 0.6.5"},
-      {:credo, "~> 0.6.1", only: [:dev, :test]}
+      {:credo, "~> 0.6.1", only: [:dev, :test]},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
